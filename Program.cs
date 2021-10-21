@@ -1,4 +1,25 @@
-﻿using System;
+﻿/**
+* Laboratoire classes et méthodes
+* 
+* Simulation d'un combat entre 2 personnages, Sergent Ebellius et Pustus le Vile
+* 4 stats par personnage : pv, armure, agilite, dommage
+* Ordre d'attaque : le plus haut en combinant agilite et un nombre aléatoire de 1 à 10
+* Calcul des dommages (pourcentage aléatoire)
+*  5- : 0
+*  6 - 60 : dommage x 1/2
+*  61 - 90 : dommage 
+*  91+ : dommage x 1.5
+* 
+* L'armure prend le dommage d'abord, puis les pv
+* 
+* Création : 21-10-19
+* Par : Frédérik Taleb
+*
+* Modification: 21-10-21
+* Par : Frédérik Taleb
+*/
+
+using System;
 
 namespace Labo_Tour_de_Zork_Combat_01
 {
