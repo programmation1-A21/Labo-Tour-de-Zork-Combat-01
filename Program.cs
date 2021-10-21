@@ -25,18 +25,18 @@ namespace Labo_Tour_de_Zork_Combat_01
             int dommagePustus = 11;
             int initiativePustus = 0;
 
-            // Le combat sera fini quand un des deux personnage arrive à 0 pv
+            // Le combat sera fini quand un des deux personnages arrive à 0 pv
             while (pvSergent > 0 && pvPustus > 0)
             {
-                // Celui qui a l'initiative la plus haute frappe en prmier
+                // Celui qui a l'initiative la plus haute frappe en premier
                 // Si l'autre n'est pas mort, il réplique avec ses dommages
-                // Quand l'initiative est égales, les 2 dommages sont assignés sans exception
+                // Quand l'initiative est égale, les 2 dommages sont assignés sans exception
                 initiativeSergent = GenererInitiative(agiliteSergent);
                 initiativePustus = GenererInitiative(agilitePustus);
                 if (initiativeSergent > initiativePustus)
                 {
                     // Il faut vérifier l'armure avant d'enlever des points de vie
-                    // En enlevant toujours les dégât à l'armure on fini par avoir une nombre négatif
+                    // En enlevant toujours les dégâts à l'armure on finit par avoir une nombre négatif
                     //
                     // Quand on a un nombre négatif, on enlève ce nombre aux points de vie et on remet l'armure à 0 
                     // pour ne pas fausser les calculs subséquents
@@ -48,12 +48,12 @@ namespace Labo_Tour_de_Zork_Combat_01
                     {
                         // la variable d'armure du personnage contient un nombre négatif
                         // il représente le nombre de dommages ayant dépassé l'armure
-                        // donc on addition le nombre négatif aux points de vie pour avoir un 
+                        // donc on additionne le nombre négatif aux points de vie pour avoir un 
                         // résultat cohérent
                         // ex: armurePustus -3 & pvPustus 30 
                         //     en faisant pvPustus += armurePustus on a 30 + -3
                         pvPustus += armurePustus;
-                        // Il ne faut pas oublier de remttre l'armure à 0, sinon on a encore les dommages du tour précédent
+                        // Il ne faut pas oublier de remettre l'armure à 0, sinon on a encore les dommages du tour précédent
                         armurePustus = 0;
                     }
                     // On assigne les dégâts au premier personnage seulement si le 2ème est encore vivant
